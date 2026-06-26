@@ -41,7 +41,7 @@ const post = async (url, data) => {
     }),
     {
       headers,
-    }
+    },
   );
   return res.data;
 };
@@ -50,13 +50,18 @@ const post = async (url, data) => {
 const jsonp = async (url, callback, params) => {
   const res = await axios(url, { params });
   const js = res.data.replace(/[\n]/g, '').replace(/\r/g, '');
-  return JSON.parse(js.slice(callback.length + 1, js.length - 1));
+  const start = callback.length + 1;
+  const end = js.endsWith(');') ? js.length - 2 : js.length - 1;
+  return JSON.parse(js.slice(start, end));
 };
 
 const getModules = () => {
   const files = glob.sync('./src/module/*.js');
   return files.map((path) => {
-    const fileName = path.replaceAll('\\', '/').replace('src/module/', '').replace('.js', '');
+    const fileName = path
+      .replaceAll('\\', '/')
+      .replace('src/module/', '')
+      .replace('.js', '');
     return {
       fileName,
       path: path.replace('src', './'),
