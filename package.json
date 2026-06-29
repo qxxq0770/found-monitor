@@ -1,7 +1,7 @@
 {
-  "name": "tiantian-fund-api",
-  "version": "v1.0.3",
-  "description": "天天基金网 Node.js API service",
+  "name": "fund-monitor",
+  "version": "1.0.0",
+  "description": "本地基金组合监控 Web 应用",
   "main": "src/index.js",
   "files": [
     "src"
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kouchao/TiantianFundApi.git"
+    "url": "git+ssh://git@github.com/qxxq0770/found--monitor.git"
   },
   "keywords": [
     "天天基金网",
@@ -27,9 +27,9 @@
   "author": "kouchao",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kouchao/TiantianFundApi/issues"
+    "url": "https://github.com/qxxq0770/found--monitor/issues"
   },
-  "homepage": "https://github.com/kouchao/TiantianFundApi#readme",
+  "homepage": "https://github.com/qxxq0770/found--monitor#readme",
   "dependencies": {
     "@koa/router": "^12.0.1",
     "axios": "^1.6.8",

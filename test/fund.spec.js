@@ -48,15 +48,6 @@ describe('基金接口', function () {
     assert.ok(res.data.Datas.length);
   });
 
-  it('获取基金的基金经理', async function () {
-    const res = await axios(`${host}/fundMNMangerList`, {
-      params: {
-        FCODE: '003834',
-      },
-    });
-    assert.ok(res.data.Datas.length);
-  });
-
   it('获取基金累计收益', async function () {
     const res = await axios(`${host}/fundVPageAcc`, {
       params: {

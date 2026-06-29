@@ -28,16 +28,6 @@ describe('搜索接口', function () {
     assert.ok(res.data.Datas.length);
   });
 
-  it('获取基金公司列表（所有）', async function () {
-    const res = await axios(`${host}/fundCompanyBaseList`);
-    assert.ok(res.data.Datas.length);
-  });
-
-  it('获取基金公司列表（所有）', async function () {
-    const res = await axios(`${host}/fundCompanyBaseList`);
-    assert.ok(res.data.Datas.length);
-  });
-
   it('基金搜索（以名称）', async function () {
     const res = await axios(`${host}/fundSearchInfoByName`, {
       params: {

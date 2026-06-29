@@ -1,27 +1,21 @@
 ---
 home: true
-title: 天天基金网 API
-heroText: 天天基金网 API
-tagline: 天天基金网 NodeJS 版 API
+title: Fund Monitor
+heroText: Fund Monitor
+tagline: 本地基金组合监控 Web 应用
 actions:
   - text: 快速开始
     link: /guide/
     type: primary
-  - text: Api 列表
+  - text: 保留接口
     link: /apis/
     type: secondary
 features:
-  - title: 持续更新
-    details: 接口数据将持续更新
-  - title: 提高字段可读性
-    details: 在接口完成度较高的情况下，会考虑整体的字段可读性
-  - title: 文档完善
-    details: 不断完善文档，不管是使用、贡献、学习都能清楚的看懂
-  - title: 测试用例
-    details: 提高覆盖率，以保证每个接口可用
-  - title: docker 部署
-    details: 在 docker 中部署，使用起来更方便
-  - title: vercel 示例
-    details: 使用 vercel 提供线上 api
-footer: Copyright © 2022-present kouchao
+  - title: 我的基金
+    details: 维护持仓成本和份额，查看实时估算、市值和收益。
+  - title: 基金趋势
+    details: 每天 23:00 保存组合快照，用于历史趋势展示。
+  - title: 系统设置
+    details: 本地配置登录用户名和密码。
+footer: Fund Monitor
 ---
