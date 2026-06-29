@@ -46,12 +46,12 @@ pnpm start
 
 启动成功后访问：
 
-- 首页：http://localhost:3000/
-- 持仓总览：http://localhost:3000/portfolio
-- 持仓配置：http://localhost:3000/config
-- 单基金估算：http://localhost:3000/valuation?FCODE=720003
-- 收益走势：http://localhost:3000/history
-- 账户设置：http://localhost:3000/settings
+- 首页：http://localhost:7000/
+- 持仓总览：http://localhost:7000/portfolio
+- 持仓配置：http://localhost:7000/config
+- 单基金估算：http://localhost:7000/valuation?FCODE=720003
+- 收益走势：http://localhost:7000/history
+- 账户设置：http://localhost:7000/settings
 
 首次登录使用：
 

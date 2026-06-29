@@ -1684,8 +1684,8 @@ function startServe() {
     const snapshotApis = { valuationApi, historyApi, detailApi };
     scheduleNextSnapshot(snapshotApis);
 
-    const server = app.listen(3000, () => {
-      log('🚀 server is running at port 3000');
+    const server = app.listen(7000, () => {
+      log('🚀 server is running at port 7000');
       resolve(server);
     });
     server.on('close', () => {
