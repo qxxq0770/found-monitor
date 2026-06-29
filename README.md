@@ -58,6 +58,42 @@ pnpm start
 - 用户名：`admin`
 - 密码：`Qqqaaa000`
 
+## systemd 部署
+
+Linux 服务器上可以创建 `found-monitor` 服务用于后台运行和开机自启动：
+
+```ini
+[Unit]
+Description=Found Monitor web service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/found-monitor
+ExecStart=/usr/bin/node /root/found-monitor/index.js
+Environment=NODE_ENV=production
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+```
+
+保存为 `/etc/systemd/system/found-monitor.service` 后执行：
+
+```bash
+systemctl daemon-reload
+systemctl enable --now found-monitor
+systemctl status found-monitor --no-pager
+```
+
+更新代码或依赖后重启服务：
+
+```bash
+systemctl restart found-monitor
+```
+
 ## 组合配置
 
 组合持仓保存在 [data/portfolio.json](data/portfolio.json) 中，也可以直接在持仓配置页编辑：
@@ -75,6 +111,8 @@ pnpm start
 - `shares`：持有份额
 
 也可以在 `/config` 页面中添加、编辑或删除持仓，修改会立即写回该文件。
+
+如果组合页没有数据，通常是因为还没有配置持仓。首次启动只会自动生成 `data/settings.json`，不会生成默认持仓；登录后访问 `/config` 添加基金代码、成本价和持有份额即可。`data/snapshots.json` 会在服务运行期间到达交易日 15:00 或 23:00 的定时快照时间后自动生成。
 
 ## 登录设置
 
