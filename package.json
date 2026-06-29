@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/qxxq0770/found--monitor.git"
+    "url": "git+ssh://git@github.com/qxxq0770/found-monitor.git"
   },
   "keywords": [
     "天天基金网",
@@ -27,9 +27,9 @@
   "author": "kouchao",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/qxxq0770/found--monitor/issues"
+    "url": "https://github.com/qxxq0770/found-monitor/issues"
   },
-  "homepage": "https://github.com/qxxq0770/found--monitor#readme",
+  "homepage": "https://github.com/qxxq0770/found-monitor#readme",
   "dependencies": {
     "@koa/router": "^12.0.1",
     "axios": "^1.6.8",
